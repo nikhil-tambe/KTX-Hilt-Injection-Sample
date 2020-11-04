@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.nikhil.gormalone.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment">
+
+        <TextView
+            android:id="@+id/booksStatus_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginM"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/books_Button"
+            app:setAnyText="@{viewModel.booksStatus}"
+            tools:text="Books Status" />
+
+        <Button
+            android:id="@+id/books_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginL"
+            android:text="@string/books"
+            app:layout_constraintBottom_toTopOf="@id/addProducts_Button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/addProducts_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginL"
+            android:text="@string/add_products"
+            app:layout_constraintBottom_toTopOf="@id/uploadProducts_Button"
+            app:layout_constraintTop_toBottomOf="@id/books_Button"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/lastUploadedTime_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginM"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/uploadProducts_Button"
+            app:setAnyText="@{viewModel.productStatus}"
+            tools:text="Last Uploaded On" />
+
+        <Button
+            android:id="@+id/uploadProducts_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginL"
+            android:text="@string/upload_products"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addProducts_Button"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

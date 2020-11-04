@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">GormalOne</string>
+
+
+
+    <!-- Add New Product Page -->
+    <string name="product_name">Product Name</string>
+    <string name="product_description">Product Description</string>
+    <string name="product_quantity">Quantity</string>
+    <string name="product_price">Price</string>
+    <string name="save">Save</string>
+    <string name="error_name_blank">Product Name cannot be blank</string>
+    <string name="error_desc_blank">Product Description cannot be blank</string>
+    <string name="error_quantity_blank">Quantity cannot be blank</string>
+    <string name="error_price_blank">Price cannot be blank</string>
+    <string name="error_name_30_chars">Name cannot be greater than 30 characters</string>
+    <string name="error_desc_100_chars">Description cannot be greater than 100 characters</string>
+    <string name="error_quantity_4_digits">Quantity cannot be greater than 4 digits </string>
+    <string name="error_price_5_digits">Price cannot be greater than 5 digits </string>
+    <string name="error_invalid_number">Invalid Number</string>
+    <string name="books">Books</string>
+    <string name="add_products">Add Products</string>
+    <string name="upload_products">Upload Products</string>
+    <string name="click_books_button_to_download_books_list">Click \'Books\' button to download books list</string>
+
+</resources>
