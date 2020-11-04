@@ -9,7 +9,9 @@ import com.nikhil.gormalone.R
 import com.nikhil.gormalone.databinding.FragmentMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -18,6 +20,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentMainBinding.bind(view)
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
 
         books_Button.setOnClickListener {
@@ -28,6 +31,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         addProducts_Button.setOnClickListener {
             Navigation.findNavController(requireView())
                 .navigate(R.id.action_mainFragment_to_addProductFragment)
+        }
+
+        uploadProducts_Button.setOnClickListener {
+            viewModel.uploadNewProducts(requireContext())
         }
     }
 

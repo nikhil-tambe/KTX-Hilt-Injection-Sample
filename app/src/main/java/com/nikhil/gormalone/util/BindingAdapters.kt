@@ -1,5 +1,6 @@
 package com.nikhil.gormalone.util
 
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -23,4 +24,9 @@ fun setAnyText(textView: TextView, any: Any?) {
         else -> ""
     }
     textView.text = message
+}
+
+@BindingAdapter("app:enableUpload")
+fun enableUpload(button: Button, count: Int){
+    button.isEnabled = count > 0
 }

@@ -22,6 +22,7 @@ class AddProductFragment : Fragment(R.layout.fragment_add_product) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentAddProductBinding.bind(view)
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
 
         subscribeToListeners()

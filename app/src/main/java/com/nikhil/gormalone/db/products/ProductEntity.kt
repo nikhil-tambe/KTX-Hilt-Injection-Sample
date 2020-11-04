@@ -18,5 +18,5 @@ data class ProductEntity(
     @ColumnInfo(name = "price")
     val product_price: Int,
     @ColumnInfo(name = "isUploaded")
-    val isUploaded: Boolean
+    var isUploaded: Boolean
 )
